@@ -33,8 +33,7 @@ class Scanner(object):
         if options.flatbed:
             args += ['--source', 'Flatbed', '--batch-count', '1']
         else:
-            args += ['--source', 'Automatic Document Feeder']
-            args += ['--adf-mode', 'Duplex' if options.duplex else 'Simplex']
+            args += ['--source', 'ADF Duplex'] if options.duplex else ['--source', 'ADF Simplex']
 
         args += ['--resolution', str(options.resolution)]
 
